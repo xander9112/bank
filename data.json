@@ -1,0 +1,35 @@
+{
+    "users": {
+        "parent": {
+            "firstName": "",
+            "lastName": "",
+            "parentLogin": null
+        },
+        "child": {
+            "firstName": "",
+            "lastName": "",
+            "parentLogin": "parent"
+        }
+    },
+    "invoices": {
+        "parent": {
+            "account": "1010101010101010",
+            "count": 100000,
+            "currency": "₽",
+            "parentLogin": null
+        },
+        "child": {
+            "account": "0101010101010101",
+            "count": 1000,
+            "currency": "₽",
+            "parentLogin": "parent"
+        }
+    },
+    "tasks": {
+        "child": {
+            "taskName": "Вымыть полы",
+            "taskPrice": 100,
+            "status": "created | done | confirmed"
+        }
+    }
+}

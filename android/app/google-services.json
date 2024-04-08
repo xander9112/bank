@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "988471013249",
+    "firebase_url": "https://bank-1260a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "bank-1260a",
+    "storage_bucket": "bank-1260a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988471013249:android:0f7ec300682e4086010280",
+        "android_client_info": {
+          "package_name": "com.example.bank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRu9zE9_noSIhmuC6orZGjvBehabkIrg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
