@@ -2,8 +2,8 @@ import 'package:bank/core/_core.dart';
 import 'package:bank/features/_features.dart';
 import 'package:dartz/dartz.dart';
 
-class UserRepositoryImpl implements UserRepository {
-  UserRepositoryImpl({
+class UsersRepositoryImpl implements UsersRepository {
+  UsersRepositoryImpl({
     required TokenDataSource tokenDataSource,
     required UserDataSource dataSource,
   })  : _tokenDataSource = tokenDataSource,

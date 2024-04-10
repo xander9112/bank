@@ -20,8 +20,10 @@ TaskDTO _$TaskDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TaskDTO {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get price => throw _privateConstructorUsedError;
+  int get price => throw _privateConstructorUsedError;
+  DateTime get createAt => throw _privateConstructorUsedError;
   TaskStatus get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +36,12 @@ abstract class $TaskDTOCopyWith<$Res> {
   factory $TaskDTOCopyWith(TaskDTO value, $Res Function(TaskDTO) then) =
       _$TaskDTOCopyWithImpl<$Res, TaskDTO>;
   @useResult
-  $Res call({String name, String price, TaskStatus status});
+  $Res call(
+      {String id,
+      String name,
+      int price,
+      DateTime createAt,
+      TaskStatus status});
 }
 
 /// @nodoc
@@ -50,11 +57,17 @@ class _$TaskDTOCopyWithImpl<$Res, $Val extends TaskDTO>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? price = null,
+    Object? createAt = null,
     Object? status = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -62,7 +75,11 @@ class _$TaskDTOCopyWithImpl<$Res, $Val extends TaskDTO>
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      createAt: null == createAt
+          ? _value.createAt
+          : createAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -78,7 +95,12 @@ abstract class _$$TaskDTOImplCopyWith<$Res> implements $TaskDTOCopyWith<$Res> {
       __$$TaskDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String price, TaskStatus status});
+  $Res call(
+      {String id,
+      String name,
+      int price,
+      DateTime createAt,
+      TaskStatus status});
 }
 
 /// @nodoc
@@ -92,11 +114,17 @@ class __$$TaskDTOImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? price = null,
+    Object? createAt = null,
     Object? status = null,
   }) {
     return _then(_$TaskDTOImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -104,7 +132,11 @@ class __$$TaskDTOImplCopyWithImpl<$Res>
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      createAt: null == createAt
+          ? _value.createAt
+          : createAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -117,24 +149,30 @@ class __$$TaskDTOImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TaskDTOImpl implements _TaskDTO {
   const _$TaskDTOImpl(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.price,
+      required this.createAt,
       this.status = TaskStatus.created});
 
   factory _$TaskDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$TaskDTOImplFromJson(json);
 
   @override
+  final String id;
+  @override
   final String name;
   @override
-  final String price;
+  final int price;
+  @override
+  final DateTime createAt;
   @override
   @JsonKey()
   final TaskStatus status;
 
   @override
   String toString() {
-    return 'TaskDTO(name: $name, price: $price, status: $status)';
+    return 'TaskDTO(id: $id, name: $name, price: $price, createAt: $createAt, status: $status)';
   }
 
   @override
@@ -142,14 +180,18 @@ class _$TaskDTOImpl implements _TaskDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskDTOImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.price, price) || other.price == price) &&
+            (identical(other.createAt, createAt) ||
+                other.createAt == createAt) &&
             (identical(other.status, status) || other.status == status));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, price, status);
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, price, createAt, status);
 
   @JsonKey(ignore: true)
   @override
@@ -167,16 +209,22 @@ class _$TaskDTOImpl implements _TaskDTO {
 
 abstract class _TaskDTO implements TaskDTO {
   const factory _TaskDTO(
-      {required final String name,
-      required final String price,
+      {required final String id,
+      required final String name,
+      required final int price,
+      required final DateTime createAt,
       final TaskStatus status}) = _$TaskDTOImpl;
 
   factory _TaskDTO.fromJson(Map<String, dynamic> json) = _$TaskDTOImpl.fromJson;
 
   @override
+  String get id;
+  @override
   String get name;
   @override
-  String get price;
+  int get price;
+  @override
+  DateTime get createAt;
   @override
   TaskStatus get status;
   @override

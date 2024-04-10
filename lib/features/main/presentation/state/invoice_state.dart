@@ -5,16 +5,16 @@ import 'package:flutter/widgets.dart';
 
 class InvoiceState extends ChangeNotifier {
   InvoiceState({
-    required InvoiceRepository repository,
-    required UserRepository userRepository,
+    required InvoicesRepository repository,
+    required UsersRepository userRepository,
   })  : _repository = repository,
         _userRepository = userRepository;
 
   List<InvoiceDTO> invoices = [];
   List<UserDTO> children = [];
 
-  final InvoiceRepository _repository;
-  final UserRepository _userRepository;
+  final InvoicesRepository _repository;
+  final UsersRepository _userRepository;
 
   Failure? error;
 

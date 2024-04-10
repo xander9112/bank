@@ -62,7 +62,6 @@ class RemoteUserDataSource implements UserDataSource {
         return Right(AuthDTO(token: login, user: r));
       });
     } catch (_) {
-      print(_);
       return Left(UserFailure(code: -1));
     }
   }

@@ -29,7 +29,8 @@
         "child": {
             "taskName": "Вымыть полы",
             "taskPrice": 100,
-            "status": "created | done | confirmed"
+            "status": "created | done | confirmed | declined",
+            "comment": null
         }
     }
 }

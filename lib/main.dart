@@ -32,11 +32,11 @@ class MainApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<InvoiceState>(
           create: (context) => InvoiceState(
-            userRepository: UserRepositoryImpl(
+            userRepository: UsersRepositoryImpl(
               tokenDataSource: TokenDataSource(),
               dataSource: RemoteUserDataSource(),
             ),
-            repository: InvoiceRepositoryImpl(
+            repository: InvoicesRepositoryImpl(
               tokenDataSource: TokenDataSource(),
               dataSource: RemoteInvoiceDataSource(),
             ),

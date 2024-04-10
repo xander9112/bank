@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bank/core/_core.dart';
 import 'package:bank/features/_features.dart';
-import 'package:bank/features/main/presentation/widgets/invoice_card.dart';
+import 'package:bank/features/main/presentation/widgets/_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -87,23 +87,7 @@ class _MainPageState extends State<MainPage> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Text(e.fullName),
-                      ),
-                      if (e.invoice == null)
-                        ElevatedButton(
-                          onPressed: () {
-                            context.read<InvoiceState>().createInvoice(e.login);
-                          },
-                          child: const Text('Создать счёт'),
-                        ),
-                      if (e.invoice != null)
-                        InvoiceCard(
-                          currency: e.invoice!.currency,
-                          count: e.invoice!.count,
-                          account: e.invoice!.maskedAccount,
-                        ),
+                      ChildCard(user: e),
                     ],
                   );
                 }),

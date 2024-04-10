@@ -2,8 +2,8 @@ import 'package:bank/core/_core.dart';
 import 'package:bank/features/_features.dart';
 import 'package:dartz/dartz.dart';
 
-class InvoiceRepositoryImpl implements InvoiceRepository {
-  InvoiceRepositoryImpl({
+class InvoicesRepositoryImpl implements InvoicesRepository {
+  InvoicesRepositoryImpl({
     required TokenDataSource tokenDataSource,
     required InvoiceDataSource dataSource,
   })  : _tokenDataSource = tokenDataSource,

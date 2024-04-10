@@ -1,2 +1,3 @@
-export 'invoice_repository.dart';
-export 'user_repository.dart';
+export 'invoices_repository.dart';
+export 'tasks_repository.dart';
+export 'users_repository.dart';
