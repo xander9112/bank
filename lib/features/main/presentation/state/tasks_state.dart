@@ -5,20 +5,16 @@ import 'package:flutter/widgets.dart';
 class TasksState extends ChangeNotifier {
   TasksState({
     required TasksRepository repository,
-    required UsersRepository userRepository,
-  })  : _repository = repository,
-        _userRepository = userRepository;
+  }) : _repository = repository;
 
   List<TaskDTO> tasks = [];
   List<UserDTO> children = [];
 
   final TasksRepository _repository;
-  final UsersRepository _userRepository;
 
   Failure? error;
 
   Future<void> init(String login) async {
-    print('INIT');
     final result = await _repository.getTasks(login);
 
     result.fold((l) {
